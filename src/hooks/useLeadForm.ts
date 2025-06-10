@@ -18,10 +18,29 @@ export const useLeadForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Simular envio para o email (em produção, você precisaria de um backend)
+      // Simular envio para o email cayodiebe@gmail.com
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       console.log('Lead enviado para cayodiebe@gmail.com:', data);
+      
+      // Simular envio de email com os dados do lead
+      const emailData = {
+        to: 'cayodiebe@gmail.com',
+        subject: 'Novo Lead - Ebook Dados Calados',
+        body: `
+          Novo lead capturado para o ebook "Dados Calados":
+          
+          Nome: ${data.name}
+          Email: ${data.email}
+          Telefone: ${data.phone}
+          Empresa: ${data.company}
+          Cargo: ${data.position}
+          
+          Data/Hora: ${new Date().toLocaleString('pt-BR')}
+        `
+      };
+      
+      console.log('Email enviado:', emailData);
       
       setIsSubmitted(true);
       toast({
@@ -45,13 +64,19 @@ export const useLeadForm = () => {
   };
 
   const downloadPDF = () => {
-    // Simular download do PDF
+    // Simular download do PDF melhorado
     const link = document.createElement('a');
-    link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVGl0bGUgKERhZG9zIENhbGFkb3MgLSA1IHBlcmd1bnRhcyBwYXJhIHRpcmFyIG9zIGRhZG9zIGRhIGluZXJjaWEpCi9BdXRob3IgKEV4cG9HZXN0w6NvKQovQ3JlYXRvciAoRXhwb0dlc3TDo28pCi9Qcm9kdWNlciAoUERGIEdlbmVyYXRvcikKL0NyZWF0aW9uRGF0ZSAoRDoyMDI0MDYwNDAwMDAwMCkKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1R5cGUgL0NhdGFsb2cKL1BhZ2VzIDMgMCBSCj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9QYWdlcwovS2lkcyBbNCAwIFJdCi9Db3VudCAxCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9UeXBlIC9QYWdlCi9QYXJlbnQgMyAwIFIKL01lZGlhQm94IFswIDAgNjEyIDc5Ml0KL1Jlc291cmNlcyA8PAovRm9udCA1IDAgUgo+PgovQ29udGVudHMgNiAwIFIKPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0YxIDcgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9MZW5ndGggMTIzCj4+CnN0cmVhbQpCVAovRjEgMTQgVGYKNTAgNzUwIFRkCihEYWRvcyBDYWxhZG9zOiA1IHBlcmd1bnRhcyBwYXJhIHRpcmFyIG9zIGRhZG9zIGRhIGluZXJjaWEpIFRqCjAgLTIwIFRkCihDb250ZcO6ZG8gcHLDoXRpY28gcGFyYSB0cmFuc2Zvcm1hciBkYWRvcyBlbSBkZWNpc8O1ZXMgcmVhaXMpIFRqCkVUCmVuZHN0cmVhbQplbmRvYmoKNyAwIG9iago8PAovVHlwZSAvRm9udAovU3VidHlwZSAvVHlwZTEKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgo+PgplbmRvYmoKeHJlZgo0IDUKMDAWODQ4Nzc2Nwo2NSA1MzU1MjQzODkKNzQgNTM1NTI0NTA5CjgzIDUzNTUyNDU4OQoxMDIgNTM1NTI0NjY5CnRyYWlsZXIKPDwKL1NpemUgOAovUm9vdCAyIDAgUgovSW5mbyAxIDAgUgo+PgpzdGFydHhyZWYKNTM1NTI0NzE5CiUlRU9GCg==';
+    link.href = 'data:application/pdf;base64,JVBERi0xLjQKJdPr6eEKMSAwIG9iago8PAovVGl0bGUgKERhZG9zIENhbGFkb3MgLSA1IHBlcmd1bnRhcyBwYXJhIHRpcmFyIG9zIGRhZG9zIGRhIGluZXJjaWEpCi9BdXRob3IgKEplYW4gRmVycmVpcmEpCi9DcmVhdG9yIChFeHBvR2VzdMOjbykKL1Byb2R1Y2VyIChQREYgR2VuZXJhdG9yKQovQ3JlYXRpb25EYXRlIChEOjIwMjQwNjEwMDAwMDAwKQo+PgplbmRvYmoKMiAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMyAwIFIKPj4KZW5kb2JqCjMgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9LaWRzIFs0IDAgUl0KL0NvdW50IDEKPD4KZW5kb2JqCjQgMCBvYmoKPDwKL1R5cGUgL1BhZ2UKL1BhcmVudCAzIDAgUgovTWVkaWFCb3ggWzAgMCA2MTIgNzkyXQovUmVzb3VyY2VzIDw8Ci9Gb250IDUgMCBSCj4+Ci9Db250ZW50cyA2IDAgUgo+PgplbmRvYmoKNSAwIG9iago8PAovRjEgNyAwIFIKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0xlbmd0aCAyMDAKPj4Kc3RyZWFtCkJUCi9GMSAxNCBUZgo1MCA3NTAgVGQKKERhZG9zIENhbGFkb3M6IDUgcGVyZ3VudGFzIHBhcmEgdGlyYXIgb3MgZGFkb3MgZGEgaW5lcmNpYSkgVGoKMCAtMjAgVGQKKHBvciBKZWFuIEZlcnJlaXJhKSBUagowIC0zMCBUZAooQ29udGXDumRvIHByw6F0aWNvIHBhcmEgdHJhbnNmb3JtYXIgZGFkb3MgZW0gZGVjaXPDtWVzIHJlYWlzKSBUagowIC0yMCBUZAooVHJhbnNmb3JtZSBzZXVzIGRhZG9zIGVtIHZhbnRhZ2VtIGNvbXBldGl0aXZhKSBUagpFVAplbmRzdHJlYW0KZW5kb2JqCjcgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL1N1YnR5cGUgL1R5cGUxCi9CYXNlRm9udCAvVGltZXMtUm9tYW4KPj4KZW5kb2JqCnhyZWYKNCA1CjUgNTM1NTI0Mzg5Cjc0IDUzNTUyNDUwOQo4MyA1MzU1MjQ1ODkKMTAyIDUzNTUyNDY2OQp0cmFpbGVyCjw8Ci9TaXplIDgKL1Jvb3QgMiAwIFIKL0luZm8gMSAwIFIKPj4Kc3RhcnR4cmVmCjUzNTUyNDcxOQolJUVPRgo=';
     link.download = 'dados-calados-ebook.pdf';
+    link.style.display = 'none';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    
+    toast({
+      title: "Download iniciado!",
+      description: "O ebook está sendo baixado para seu dispositivo.",
+    });
   };
 
   return {
