@@ -108,12 +108,10 @@ const Index = () => {
                 <div className="text-sm text-slate-400">Gratuito</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-400">PDF</div>
-                <div className="text-sm text-slate-400">Download</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-orange-400">5min</div>
-                <div className="text-sm text-slate-400">Leitura</div>
+                <div className="text-2xl font-bold text-orange-400">PDF</div>
+                <div className="text-sm text-slate-400">Download</div>
               </div>
             </div>
           </div>
