@@ -2,6 +2,8 @@
 import React from 'react';
 import LeadForm from '@/components/LeadForm';
 import { BookOpen, TrendingUp, BarChart3, Users, CheckCircle, Target } from 'lucide-react';
+import ebookCover from '@/components/capa.png'; // ajuste esse path conforme sua estrutura real
+
 
 const Index = () => {
   return (
@@ -20,43 +22,29 @@ const Index = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-screen">
           
           {/* Left side - Content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="space-y-6">
+          <div className="space-y-10 animate-fade-in">
+            <div className="space-y-10">
               <div className="flex items-center space-x-2 text-orange-400 font-semibold">
-                <BarChart3 className="w-5 h-5" />
-                <span>Inteligência de Mercado</span>
-              </div>
-              
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                <span className="block text-gray-300 text-3xl lg:text-4xl xl:text-5xl line-through opacity-75">
-                  DADOS
-                </span>
-                <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-black">
-                  CALADOS
-                </span>
-                <span className="text-2xl lg:text-3xl xl:text-4xl block mt-4 text-slate-200">
-                  5 perguntas para tirar os dados da inércia
-                </span>
-              </h1>
-            </div>
-
-            {/* Espaço dedicado para imagem do ebook */}
-            <div className="flex justify-center lg:justify-start my-8">
-              <div className="relative">
-                <div className="w-64 h-80 bg-gradient-to-br from-slate-700 to-blue-900 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 border-2 border-orange-500/30">
-                  <div className="w-full h-full flex items-center justify-center rounded-lg overflow-hidden">
-                    {/* Placeholder para a imagem do ebook */}
-                    <div className="w-full h-full bg-slate-600/30 flex flex-col items-center justify-center text-center p-6">
-                      <BookOpen className="w-16 h-16 text-orange-400 mb-4" />
-                      <div className="text-orange-400 font-bold text-lg mb-2">IMAGEM DO EBOOK</div>
-                      <div className="text-slate-300 text-sm">Adicione aqui a imagem da capa do ebook</div>
-                    </div>
-                  </div>
+                <div className="flex items-center space-x-2 text-orange-400 font-semibold">
+                  <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+                  <span className="block text-gray-300 text-3xl lg:text-4xl xl:text-5xl line-through opacity-75">
+                    DADOS
+                  </span>
+                  <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-black">
+                    CALADOS
+                  </span>
+                  <span className="text-2xl lg:text-3xl xl:text-4xl block mt-4 text-slate-200">
+                    5 perguntas para tirar os dados da inércia
+                  </span>
+                </h1>
                 </div>
-                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-orange-500 rounded-full animate-pulse"></div>
               </div>
             </div>
-
+          </div>
+          <div className="space-y-2 animate-fade-in pl-12">
+            <img src={ebookCover}/>
+          </div>
+          <div className="space-y-10 animate-fade-in">
             {/* O que você vai descobrir */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
