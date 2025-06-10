@@ -69,12 +69,12 @@ const Index = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-800">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold-400">50+</div>
+                <div className="text-2xl font-bold text-gold-400">20+</div>
                 <div className="text-sm text-gray-400">Páginas</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gold-400">5</div>
-                <div className="text-sm text-gray-400">Perguntas-Chave</div>
+                <div className="text-sm text-gray-400">Empresas impactadas</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gold-400">100%</div>
@@ -86,37 +86,6 @@ const Index = () => {
           {/* Right side - Form */}
           <div className="flex items-center justify-center">
             <LeadForm />
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom section */}
-      <div className="relative z-10 border-t border-gray-800 bg-gray-900/50 backdrop-blur-sm">
-        <div className="container mx-auto px-4 py-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-2xl font-bold text-white">
-              Transforme dados em decisões reais
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Este ebook já ajudou centenas de empresas a implementar estratégias data-driven 
-              e transformar seus processos de tomada de decisão.
-            </p>
-            <div className="flex justify-center items-center space-x-8 pt-6">
-              <div className="text-center">
-                <div className="text-lg font-semibold text-gold-400">5.000+</div>
-                <div className="text-sm text-gray-400">Downloads</div>
-              </div>
-              <div className="w-px h-8 bg-gray-700"></div>
-              <div className="text-center">
-                <div className="text-lg font-semibold text-gold-400">98%</div>
-                <div className="text-sm text-gray-400">Satisfação</div>
-              </div>
-              <div className="w-px h-8 bg-gray-700"></div>
-              <div className="text-center">
-                <div className="text-lg font-semibold text-gold-400">4.8/5</div>
-                <div className="text-sm text-gray-400">Avaliação</div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
