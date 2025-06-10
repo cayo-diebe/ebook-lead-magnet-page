@@ -13,7 +13,8 @@ const LeadForm = () => {
     name: '',
     email: '',
     phone: '',
-    company: ''
+    company: '',
+    position: ''
   });
 
   const handleInputChange = (field: keyof LeadFormData, value: string) => {
@@ -25,12 +26,12 @@ const LeadForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.phone && formData.company) {
+    if (formData.name && formData.email && formData.phone && formData.company && formData.position) {
       await submitLead(formData);
     }
   };
 
-  const isFormValid = formData.name && formData.email && formData.phone && formData.company;
+  const isFormValid = formData.name && formData.email && formData.phone && formData.company && formData.position;
 
   if (isSubmitted) {
     return (
@@ -110,6 +111,19 @@ const LeadForm = () => {
               onChange={(e) => handleInputChange('company', e.target.value)}
               className="bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-400 focus:border-gold-500"
               placeholder="Nome da sua empresa"
+              required
+            />
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="position" className="text-white">Cargo</Label>
+            <Input
+              id="position"
+              type="text"
+              value={formData.position}
+              onChange={(e) => handleInputChange('position', e.target.value)}
+              className="bg-gray-800/50 border-gray-600 text-white placeholder:text-gray-400 focus:border-gold-500"
+              placeholder="Seu cargo na empresa"
               required
             />
           </div>

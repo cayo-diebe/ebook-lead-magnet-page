@@ -1,7 +1,7 @@
 
 import React from 'react';
 import LeadForm from '@/components/LeadForm';
-import { BookOpen, TrendingUp, BarChart3, Users } from 'lucide-react';
+import { BookOpen, TrendingUp, BarChart3, Users, CheckCircle, Target } from 'lucide-react';
 
 const Index = () => {
   return (
@@ -28,58 +28,41 @@ const Index = () => {
               </div>
               
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                Transforme
                 <span className="block bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
-                  Dados em Decisões
+                  DADOS CALADOS
                 </span>
-                Reais
+                <span className="text-2xl lg:text-3xl xl:text-4xl block mt-2">
+                  5 perguntas para tirar os dados da inércia
+                </span>
               </h1>
-              
-              <p className="text-xl text-gray-300 leading-relaxed">
-                Descubra como aplicar inteligência de mercado na prática e tomar decisões estratégicas baseadas em dados concretos.
-              </p>
             </div>
 
-            {/* Features */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <BookOpen className="w-5 h-5 text-gold-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">Conteúdo Prático</h3>
-                  <p className="text-sm text-gray-400">Estratégias aplicáveis no dia a dia</p>
-                </div>
+            {/* O que você vai descobrir */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-gold-400" />
+                <h2 className="text-xl font-bold text-white">O QUE VOCÊ VAI DESCOBRIR</h2>
               </div>
-
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <TrendingUp className="w-5 h-5 text-gold-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">Casos Reais</h3>
-                  <p className="text-sm text-gray-400">Exemplos de empresas de sucesso</p>
-                </div>
+              <div className="space-y-3 text-gray-300">
+                <p>• Por que tantos dados viram decoração em vez de direção</p>
+                <p>• Como transformar dashboards em decisões</p>
+                <p>• Os 5 pontos cegos que impedem a inteligência de mercado de gerar impacto</p>
+                <p>• Um framework prático para engajar liderança, BI e vendas na mesma cadência</p>
+                <p>• Como criar um ciclo de decisões que aprende, ajusta e avança</p>
               </div>
+            </div>
 
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <BarChart3 className="w-5 h-5 text-gold-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">Ferramentas</h3>
-                  <p className="text-sm text-gray-400">Templates e frameworks prontos</p>
-                </div>
+            {/* Para quem é o material */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <Target className="w-5 h-5 text-gold-400" />
+                <h2 className="text-xl font-bold text-white">ESSE MATERIAL É PRA VOCÊ QUE...</h2>
               </div>
-
-              <div className="flex items-start space-x-3">
-                <div className="w-10 h-10 bg-gold-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <Users className="w-5 h-5 text-gold-400" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-white">Expertise</h3>
-                  <p className="text-sm text-gray-400">Conhecimento de especialistas</p>
-                </div>
+              <div className="space-y-3 text-gray-300">
+                <p>• Lidera áreas comerciais, BI, inteligência de mercado ou planejamento</p>
+                <p>• Sente que os dados da empresa estão soltos e mal aproveitados</p>
+                <p>• Já investiu em ferramentas, mas as decisões ainda são lentas ou intuitivas</p>
+                <p>• Quer desafiar sua cultura analítica e virar a chave da execução</p>
               </div>
             </div>
 
@@ -90,8 +73,8 @@ const Index = () => {
                 <div className="text-sm text-gray-400">Páginas</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold-400">10+</div>
-                <div className="text-sm text-gray-400">Casos Práticos</div>
+                <div className="text-2xl font-bold text-gold-400">5</div>
+                <div className="text-sm text-gray-400">Perguntas-Chave</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-gold-400">100%</div>
@@ -112,7 +95,7 @@ const Index = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="text-center space-y-4">
             <h2 className="text-2xl font-bold text-white">
-              Junte-se a milhares de profissionais
+              Transforme dados em decisões reais
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Este ebook já ajudou centenas de empresas a implementar estratégias data-driven 
