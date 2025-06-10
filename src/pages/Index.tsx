@@ -23,23 +23,25 @@ const Index = () => {
           
           {/* Left side - Content */}
           <div className="space-y-10 animate-fade-in">
-            <div className="space-y-10">
+            <div className="space-y-7">
               <div className="flex items-center space-x-2 text-orange-400 font-semibold">
                 <div className="flex items-center space-x-2 text-orange-400 font-semibold">
                   <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
-                  <span className="block text-gray-300 text-3xl lg:text-4xl xl:text-5xl line-through opacity-75">
+                  <span className="block text-gray-300 text-6xl lg:text-4xl xl:text-5xl line-through opacity-75">
                     DADOS
                   </span>
-                  <span className="block bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-black">
+                  <span className="block bg-gradient-to-r text-6xl from-orange-400 to-orange-600 bg-clip-text text-transparent font-black">
                     CALADOS
                   </span>
                   <span className="text-2xl lg:text-3xl xl:text-4xl block mt-4 text-slate-200">
-                    5 perguntas para tirar os dados da inércia
+                    5 PERGUNTAS PARA TIRAR OS DADOS DA INÉRCIA
                   </span>
                 </h1>
                 </div>
               </div>
+                <h2 className="text-xl font-bold text-white">por JEAN FERREIRA</h2>
             </div>
+            <hr/>
           </div>
           <div className="space-y-2 animate-fade-in pl-12">
             <img src={ebookCover}/>
