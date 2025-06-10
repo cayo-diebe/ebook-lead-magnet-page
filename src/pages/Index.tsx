@@ -37,15 +37,13 @@ const Index = () => {
           </h1>
         </div>
 
-        {/* Main Content Layout */}
-        <div className="grid lg:grid-cols-3 gap-8 items-start">
-          
+        {/* Top Section - Image and Main Text */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left side - Ebook Image */}
-          <div className="lg:col-span-1 flex justify-center">
+          <div className="flex justify-center">
             <div className="relative">
               <div className="w-80 h-96 bg-gradient-to-br from-slate-700 to-blue-900 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 border-2 border-orange-500/30">
                 <div className="w-full h-full flex items-center justify-center rounded-lg overflow-hidden">
-                  {/* Placeholder para a imagem do ebook */}
                   <img 
                     src="/lovable-uploads/465fb424-3acb-463c-97c5-53649c9802b4.png" 
                     alt="Ebook Dados Calados" 
@@ -57,8 +55,8 @@ const Index = () => {
             </div>
           </div>
 
-          {/* Center - Content */}
-          <div className="lg:col-span-1 space-y-8">
+          {/* Right side - Main Content */}
+          <div className="space-y-8">
             {/* O que você vai descobrir */}
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
@@ -115,11 +113,11 @@ const Index = () => {
               </div>
             </div>
           </div>
+        </div>
 
-          {/* Right side - Form */}
-          <div className="lg:col-span-1 flex justify-center">
-            <LeadForm />
-          </div>
+        {/* Bottom Section - Form */}
+        <div className="flex justify-center">
+          <LeadForm />
         </div>
 
         {/* Stats Section */}
