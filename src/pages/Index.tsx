@@ -69,14 +69,6 @@ const Index = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-800">
               <div className="text-center">
-                <div className="text-2xl font-bold text-gold-400">20+</div>
-                <div className="text-sm text-gray-400">Páginas</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gold-400">5</div>
-                <div className="text-sm text-gray-400">Empresas impactadas</div>
-              </div>
-              <div className="text-center">
                 <div className="text-2xl font-bold text-gold-400">100%</div>
                 <div className="text-sm text-gray-400">Gratuito</div>
               </div>
