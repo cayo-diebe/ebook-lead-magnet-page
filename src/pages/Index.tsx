@@ -40,23 +40,17 @@ const Index = () => {
               </h1>
             </div>
 
-            {/* Ebook Image */}
+            {/* Espaço dedicado para imagem do ebook */}
             <div className="flex justify-center lg:justify-start my-8">
               <div className="relative">
-                <div className="w-48 h-64 bg-gradient-to-br from-slate-700 to-blue-900 rounded-lg shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
-                  <div className="p-6 h-full flex flex-col justify-between">
-                    <div>
-                      <div className="text-xs text-orange-400 font-semibold mb-2">EBOOK GRATUITO</div>
-                      <h3 className="text-lg font-bold text-white leading-tight mb-2">
-                        <span className="line-through text-gray-400 text-sm">DADOS</span><br/>
-                        <span className="text-orange-400">CALADOS</span>
-                      </h3>
-                      <p className="text-xs text-slate-300">5 perguntas para tirar os dados da inércia</p>
+                <div className="w-64 h-80 bg-gradient-to-br from-slate-700 to-blue-900 rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300 border-2 border-orange-500/30">
+                  <div className="w-full h-full flex items-center justify-center rounded-lg overflow-hidden">
+                    {/* Placeholder para a imagem do ebook */}
+                    <div className="w-full h-full bg-slate-600/30 flex flex-col items-center justify-center text-center p-6">
+                      <BookOpen className="w-16 h-16 text-orange-400 mb-4" />
+                      <div className="text-orange-400 font-bold text-lg mb-2">IMAGEM DO EBOOK</div>
+                      <div className="text-slate-300 text-sm">Adicione aqui a imagem da capa do ebook</div>
                     </div>
-                    <div className="flex items-center justify-center">
-                      <BarChart3 className="w-16 h-16 text-orange-400/30" />
-                    </div>
-                    <div className="text-xs text-slate-400">por Jean Ferreira</div>
                   </div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-orange-500 rounded-full animate-pulse"></div>
