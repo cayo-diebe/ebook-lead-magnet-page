@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - ojeanferreira
+name: Build and deploy Vite app to Azure Web App - ojeanferreira
 
 on:
   push:
@@ -20,8 +20,14 @@ jobs:
         with:
           node-version: '22.x'
 
-      - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Vite app
+        run: npm run build
+
+      - name: Zip dist folder for deployment
+        run: zip -r release.zip dist
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -52,7 +58,7 @@ jobs:
         with:
           app-name: 'ojeanferreira'
           slot-name: 'Production'
-          package: .
+          package: dist
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8EE953F24ADC4C18B82F8F88AF2500FD }}
         timeout-minutes: 5
         continue-on-error: true
